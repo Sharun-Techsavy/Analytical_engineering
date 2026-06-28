@@ -37,8 +37,13 @@ models:
       +schema:
       +materialized: table
     warehouse:
-      +materialized: view
+      +materialized: table
+      +schema: dwh_northwind
     analytics_obt:
+      +enabled: true
       +materialized: view
+      dim_date:
+        +materialized: view
+      
     # Config indicated by + and applies to all files under models/example/
 
